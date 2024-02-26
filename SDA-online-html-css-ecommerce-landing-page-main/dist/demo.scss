@@ -1,0 +1,105 @@
+@forward 'html';
+@use 'variables';
+@use 'mixin';
+@forward 'header';
+@forward 'footer';
+@forward 'body';
+
+.btn{
+    @include mixin.btn-style;
+    } 
+
+  /* HERO STYLE */
+  #hero{
+    height: 100vh;
+    background-image: url("../assets/background-img4.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    #hero-items{
+        position:relative;
+        top: 30rem;
+        text-align: center;
+        height: auto;
+      }
+      #hero__heading{
+        color: white;
+        text-transform: uppercase;
+        font-size: 50px;
+      }
+      #hero__slogan{
+        color: white;
+        margin-bottom: 1em;
+      }
+  }
+  /* END HERO STYLE */
+  /* PRODUCT CARD STYLE */
+  #products-showcase{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    .product{
+        margin: 2rem 1rem;
+        padding-bottom: 1em;
+        background-color: variables.$background-color;
+        @include mixin.shadow();
+        text-align: center;
+        ul {
+            padding: 2em 1em 2em 1em;
+            text-align: left;
+        }
+        .product__img{
+            width: 100%;
+        }
+      }
+
+  }
+  /* END PRODUCT CARD STYLE */
+  /* NEWSLETTER FORM STYLE */
+  #newsletters-form{
+    max-width: 560px; 
+    margin: 0 auto 2rem auto; 
+    padding: 20px; 
+    background-color: white; 
+    border: 2px solid #CCC8AA;
+    border-radius: 5px;
+    &:hover{
+        border: 2px solid rgb(24, 24, 24);
+      }
+      #Newsletter-label{
+        color: variables.$black-shade;
+        font-size: 20px;
+      }
+  }
+
+label {
+    font-weight: bold; 
+  }
+  .form-btn{
+    @include mixin.form-btn-style();
+  }
+ 
+input[type="email"] {
+    @include mixin.input-style(60%);
+
+  }
+input[type="text"] {
+    @include mixin.input-style(40%);
+  }
+  /* END NEWSLETTER FORM STYLE */
+
+  /* MEDIA STYLE */
+  @media (max-width: 768px)  {
+    #hero{
+      background-position: center center;
+    }
+    #hero-items{
+      top: 10rem;
+    }
+    #products-showcase{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+  }
+  /*# sourceMappingURL=style.css.map */
+  

@@ -1,0 +1,37 @@
+@use 'variables';
+@use 'mixin';
+  /* HEADER STYLE */
+  .header {
+    background-color:variables.$background-color;
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100; 
+    @include mixin.shadow();
+    #nav-bar{
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+      }
+      .nav__list{
+      display: inline-block;
+      padding: 0.5em 2em;
+      transition-property: all ;
+      transition-duration: 0.5s;
+      &:hover{
+        padding-bottom: 0;
+        padding-top: 0;
+        border: 2px solid variables.$black-shade;
+      }
+      }
+      #Logo{
+      display: block;
+
+      }
+      #Logo-img{
+        width: 150px;
+      }
+  }
+  /* END HEADER STYLE */

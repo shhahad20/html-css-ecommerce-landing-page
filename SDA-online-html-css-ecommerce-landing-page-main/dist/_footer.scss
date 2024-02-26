@@ -1,0 +1,16 @@
+  /* FOOTER STYLE */
+  footer{
+    display: flex;
+    justify-content: center; 
+    .footer__list{
+        margin-left: 1em;
+        padding: 1em;
+        display: inline-block;
+        text-align: center;
+        gap: 10px;
+        transition-property: all ;
+        transition-duration: 0.5s;
+      }
+  }
+
+  /* END FOOTER STYLE */

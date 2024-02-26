@@ -1,0 +1,39 @@
+@use 'variables';
+@mixin btn-style() {
+    padding: 0.4em 2em;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    color:rgb(24, 24, 24);
+    font-family: variables.$primary-font;
+    background-color: rgb(240, 240, 240);
+    font-size: 16px;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.05);
+      color: variables.$black-shade;
+    }
+  }
+@mixin form-btn-style(){
+    background-color: white;
+    border: 2px solid #CCC8AA;
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    color: rgb(24, 24, 24);
+    border-radius: 3px;
+    padding: 0.3em 1em;
+    &:hover{
+        font-weight: bold;
+      }
+}
+@mixin shadow(){
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+@mixin input-style($input-width){
+    width: $input-width; 
+    padding: 10px; 
+    margin: 10px 0;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+}
